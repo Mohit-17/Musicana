@@ -9,5 +9,6 @@ Requirements
 
 Steps for implementing this project
 1. Paste your 'ClientID' and 'ClientSecret' and 'dbURI' in keys.js file present in config folder of main directory. 
-2. Run npm install to install all the dependencies present in package.json file
-3. Run nodemon app.js to start the server file, now you can view the website at https://localhost:3000
+2. Enter cookieKey in keys.js file.(Any random good name would do).
+3. Run npm install to install all the dependencies present in package.json file
+4. Run nodemon app.js to start the server file, now you can view the website at https://localhost:3000
