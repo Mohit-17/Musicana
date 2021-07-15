@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Selection</title>
+    
+</head>
+
+<style >
+    
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-image: url(https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX8877209.jpg);
+}
+
+.wrapper {
+  width: 780px;
+  margin: 100px auto 0;
+}
+
+.wrapper .title {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container .option_item {
+  display: block;
+  position: relative;
+  width: 175px;
+  height: 175px;
+  margin: 10px;
+}
+
+.container .option_item .checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+}
+
+.option_item .option_inner {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 5px;
+  text-align: center;
+  padding: 58px 40px;
+  cursor: pointer;
+  color: #585c68;
+  display: block;
+  border: 5px solid transparent;
+  position: relative;
+}
+
+.option_item .option_inner .icon {
+  margin-bottom: 10px;
+}
+
+.option_item .option_inner .icon .fab {
+  font-size: 32px;
+}
+
+.option_item .option_inner .name {
+  user-select: none;
+}
+
+.option_item .checkbox:checked ~ .option_inner.Robbie_Williams {
+  border-color: #3b5999;
+  color: #3b5999;
+}
+
+.option_item .checkbox:checked ~ .option_inner.Foals {
+  border-color: #55acee;
+  color: #55acee;
+}
+
+.option_item .checkbox:checked ~ .option_inner.Joshua_Redman {
+  border-color: #e4405f;
+  color: #e4405f;
+}
+
+.option_item .checkbox:checked ~ .option_inner.Bryn_Christopher {
+  border-color: #0077b5;
+  color: #0077b5;
+}
+
+.option_item .checkbox:checked ~ .option_inner.Lou_Rhodes {
+  border-color: #25d366;
+  color: #25d366;
+}
+
+.option_item .checkbox:checked ~ .option_inner.Robert_Pollard {
+  border-color: #dd4b39;
+  color: #dd4b39;
+}
+
+.option_item .checkbox:checked ~ .option_inner.Frenzal_Rhomb {
+  border-color: #ff5700;
+  color: #ff5700;
+}
+
+.option_item .checkbox:checked ~ .option_inner.Richard_Galliano {
+  border-color: #b92b27;
+  color: #b92b27;
+}
+
+.option_item .option_inner .tickmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 20px solid;
+  border-color: #000 transparent transparent #000;
+  display: none;
+}
+
+.option_item .option_inner .tickmark:before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  width: 15px;
+  height: 5px;
+  border: 3px solid;
+  border-color: transparent transparent #fff #fff;
+  transform: rotate(-45deg);
+}
+
+.option_item .checkbox:checked ~ .option_inner .tickmark {
+  display: block;
+}
+
+.option_item .option_inner.Robbie_Williams .tickmark {
+  border-color: #3b5999 transparent transparent #3b5999;
+}
+
+.option_item .option_inner.Foals .tickmark {
+  border-color: #55acee transparent transparent #55acee;
+}
+
+.option_item .option_inner.Joshua_Redman .tickmark {
+  border-color: #e4405f transparent transparent #e4405f;
+}
+
+.option_item .option_inner.Bryn_Christopher .tickmark {
+  border-color: #0077b5 transparent transparent #0077b5;
+}
+
+.option_item .option_inner.Lou_Rhodes .tickmark {
+  border-color: #25d366 transparent transparent #25d366;
+}
+
+.option_item .option_inner.Robert_Pollard .tickmark {
+  border-color: #dd4b39 transparent transparent #dd4b39;
+}
+
+.option_item .option_inner.Frenzal_Rhomb .tickmark {
+  border-color: #ff5700 transparent transparent #ff5700;
+}
+
+.option_item .option_inner.Richard_Galliano .tickmark {
+  border-color: #b92b27 transparent transparent #b92b27;
+}
+
+</style>
+
+<script>$("input[type = 'checkbox']").val</script>
+
+
+<body>
+
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+<div class="wrapper">
+  <div class="title">
+    Choose your favorite Artist
+  </div>
+  <% errors.forEach(function(elements) { %>
+    <p style="color: white;" Align = 'center'><strong><%= elements.msg %></strong></p>
+  <% }); %>
+ <form action="/profile" method="POST">
+  <div class="container">
+    <label for="Robbie Williams" class="option_item">
+      <input type="checkbox" id="Robbie Williams" class="checkbox" name="Robbie Williams">
+      <div class="option_inner Robbie_Williams">
+        <div class="tickmark"></div>
+        <div class="icon"><i class="fab fa-odnoklassniki"></i></div>
+        <div class="name">Robbie Williams</div>
+        
+      </div>
+    </label>
+    <label for="Foals" class="option_item">
+      <input type="checkbox" id="Foals" class="checkbox" name="Foals">
+      <div class="option_inner Foals">
+        <div class="tickmark"></div>
+        <div class="icon"><i class="fab fa-odnoklassniki"></i></div>
+        <div class="name">Foals</div>
+      </div>
+    </label>
+    <label for="Joshua Redman" class="option_item">
+      <input type="checkbox" id="Joshua Redman" class="checkbox" name="Joshua Redman">
+      <div class="option_inner Joshua_Redman">
+        <div class="tickmark"></div>
+        <div class="icon"><i class="fab fa-odnoklassniki"></i></div>
+        <div class="name">Joshua Redman</div>
+      </div>
+    </label>
+    <label for="BrynChristopher" class="option_item">
+      <input type="checkbox" id="BrynChristopher" class="checkbox" name="Bryn Christopher">
+      <div class="option_inner Bryn_Christopher">
+        <div class="tickmark"></div>
+        <div class="icon"><i class="fab fa-odnoklassniki"></i></div>
+        <div class="name">Bryn Christopher</div>
+      </div>
+    </label>
+    <label for="Lou Rhodes" class="option_item">
+      <input type="checkbox" id="Lou Rhodes" class="checkbox" name="Lou Rhodes">
+      <div class="option_inner Lou_Rhodes">
+        <div class="tickmark"></div>
+        <div class="icon"><i class="fab fa-odnoklassniki"></i></div>
+        <div class="name">Lou Rhodes</div>
+      </div>
+    </label>
+    <label for="RobertPollard" class="option_item">
+      <input type="checkbox" id="RobertPollard" class="checkbox" name="Robert Pollard">
+      <div class="option_inner Robert_Pollard">
+        <div class="tickmark"></div>
+        <div class="icon"><i class="fab fa-odnoklassniki"></i></div>
+        <div class="name">Robert Pollard</div>
+      </div>
+    </label>
+    <label for="Frenzal Rhomb" class="option_item">
+      <input type="checkbox" id="Frenzal Rhomb" class="checkbox"  name="Frenzal Rhomb">
+      <div class="option_inner Frenzal_Rhomb">
+        <div class="tickmark"></div>
+        <div class="icon"><i class="fab fa-odnoklassniki"></i></div>
+        <div class="name">Frenzal Rhomb</div>
+      </div>
+    </label>
+    <label for="Richard Galliano" class="option_item">
+      <input type="checkbox" id="Richard Galliano" class="checkbox"
+      name="Richard Galliano">
+      <div class="option_inner Richard_Galliano">
+        <div class="tickmark"></div>
+        <div class="icon"><i class="fab fa-odnoklassniki"></i></div>
+        <div class="name">Richard Galliano</div>
+      </div>
+    </label>
+  </div>
+  <input type="submit" value="Submit" >
+</form>
+</div>
+
+     
+</body>
+
+</html>

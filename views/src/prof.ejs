@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Streaming Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css ">
+	<link rel="stylesheet"  href="htpps://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css"/>
+	<link rel="stylesheet" type="text/css" href="demo.css">
+
+
+</head>
+<body>
+
+
+<div class="header">
+  <a href="#default" class="logo"> <i class="fas fa-music fa-2x mx-3"></i> Musicana.. &sung; &sung;</a>
+  <div class="header-right">
+    <a class="active" href="/logout">Logout</a>
+    <a href="/profile/dashboard">Home</a>
+    <a href="/profile/playlist">PlayList</a>
+    <a href="/profile/add_songs">Add Songs</a>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+     <div class="main">
+     	<div class="container">
+  
+
+        <div class="card-body">
+          <form action="/profile/personal_profile" method="post">
+          
+           <label class="text-muted font-weight-bold" class="text-muted font-weight-bold"><h4 style="color: black;">Name</h4></label>
+         <input type="text" name="rname" value="<%= name %>" class="form-control mb-3">
+         
+         <label class="text-muted font-weight-bold" class="text-muted font-weight-bold"> <h4 style="color: black;">Email</h4></label>
+        
+         <input type="email" name="remail" value="<%= email %>" class="form-control mb-3">
+         
+         
+         <input type="submit" name="Update" class="btn btn-block btn-primary" value="Delete Account">
+          </form>
+
+<h1>
+
+</h1>
+
+</div>
+</div>
+
+</body>
+</html>

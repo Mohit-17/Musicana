@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> choices</title>
+
+	 <link rel="stylesheet" type="text/css" href="home.css">
+
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+</head>
+
+
+<style>
+.dropbtn {
+  background-color: #9290b1;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #c8c6e1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:#3b98fd;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #8876dc;}
+
+.show {display: block;}
+</style>
+
+
+<body>
+
+
+<div class="wrapper">
+    <div class="sidebar">
+        
+        <ul>
+            <div class="div-logo">
+            <img src="https://i.pinimg.com/474x/b3/be/41/b3be410f10d82441ba46f7d65c763958.jpg" height="80px";>
+            <span class="logo-text">Tune In Musicana..</span>
+            </div>
+            <li><a href="/profile/dashboard"><i class="fas fa-home"></i>Home</a></li>
+
+
+
+
+
+
+
+            <li>
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn"><i class="fas fa-user"></i>Artist</button>
+  <div id="myDropdown" class="dropdown-content">
+    <% artist.find(function(element){ %>
+      <% if(element == "Robbie Williams") { %>
+        <a href="/profile/A1">Robbie Williams</a>
+      <% } %>
+    <% }) %>
+    <% artist.find(function(element){ %>
+      <% if(element == "Foals") { %>
+        <a href="/profile/A2">Foals</a>
+      <% } %>
+    <% }) %>
+    <% artist.find(function(element){ %>
+      <% if(element == "Richard Galliano") { %>
+        <a href="/profile/A3">Richard Galliano</a>
+      <% } %>
+    <% }) %>
+    <% artist.find(function(element){ %>
+      <% if(element == "Joshua Redman") { %>
+        <a href="/profile/A4">Joshua Redman</a>
+      <% } %>
+    <% }) %>
+    <% artist.find(function(element){ %>
+      <% if(element == "Breyn Christopher") { %>
+        <a href="/profile/A5">Breyn Christopher</a>
+      <% } %>
+    <% }) %>
+    <% artist.find(function(element){ %>
+      <% if(element == "Lou Rhodes") { %>
+        <a href="/profile/A6">Lou Rhodes</a>
+      <% } %>
+    <% }) %>
+    <% artist.find(function(element){ %>
+      <% if(element == "Robert Pollard") { %>
+        <a href="/profile/A7">Robert Pollard</a>
+      <% } %>
+    <% }) %>
+    <% artist.find(function(element){ %>
+      <% if(element == "Frenzal Rhomb") { %>
+        <a href="/profile/A8">Frenzal Rhomb</a>
+      <% } %>
+    <% }) %>
+  </div>
+</div>
+</li>
+              
+            <li><a href="/profile/personal_profile"><i class="fas fa-address-card"></i>Profile</a></li>
+            
+            <li><a href="/profile/playlist"><i class="fas fa-blog"></i>Playlist</a></li>
+            </ul>
+        
+    </div>
+    <div class="main_content">
+        <div class="header"><h2>Robbie Williams</h2></div>  
+        <div class="info">
+
+ <div class="box">
+
+<h2 style="color: #140a71;"> <strong>Select Your Prefernces...!</strong></h2>
+
+<form action="/profile/A1" method="POST">
+  <input type="checkbox" id="song1" name="song1" value="Bridge Over Troubled Water">
+  <label for="song1" style="color: black;"> Bridge Over Troubled Water</label><br>
+  <input type="checkbox" id="song2" name="song2" value="By All Means Necessary">
+  <label for="song2" style="color: black;"> By All Means Necessary</label><br>
+  <input type="checkbox" id="song3" name="song3" value="Come Fly with Me">
+  <label for="song3" style="color: black;"> Come Fly with Me</label><br>
+ <input type="checkbox" id="song4" name="song4" value="Come Take Me Over">
+  <label for="song4" style="color: black;"> Come Take Me Over</label><br>
+  <input type="checkbox" id="song5" name="song5" value="Do Nothing 'Till You Hear from Me">
+  <label for="song5" style="color: black;"> Do Nothing 'Till You Hear from Me</label><br>
+  <input type="checkbox" id="song6" name="song6" value="Eyes on the Highway">
+  <label for="song6" style="color: black;"> Eyes on the Highway</label><br>
+   <input type="checkbox" id="song7" name="song7" value="Forever Texas">
+  <label for="song7" style="color: black;"> Forever Texas</label><br>
+  <input type="checkbox" id="song8" name="song8" value="Good People">
+  <label for="song8" style="color: black;">  Good People</label><br>
+  
+
+
+
+  <br>
+  <input type="submit" value="Submit">
+</form>
+
+</div>
+
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
+
+</body>
+</html>

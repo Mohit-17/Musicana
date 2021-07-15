@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>tune in musicana....</title>
+	<link rel="stylesheet" type="text/css" href="log.css">
+	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+</head>
+<body1>
+
+<header class="home-header">
+	<div class="div-logo">
+		<svg xmlns="http://www.w3.org/2000/svg" class="equilizer" viewBox="0 0 128 128">
+  <g>
+    <title>Audio Equilizer</title>
+    <rect class="bar" transform="translate(0,0)" y="15"></rect>
+    <rect class="bar" transform="translate(25,0)" y="15"></rect>
+    <rect class="bar" transform="translate(50,0)" y="15"></rect>
+    <rect class="bar" transform="translate(75,0)" y="15"></rect>
+    <rect class="bar" transform="translate(100,0)" y="15"></rect>
+  </g>
+</svg>
+		<span class="logo-text">Tune in musicana..!</span>
+	</div>
+		<nav class="home-nav">
+			<a href="/">Home</a>
+			<a href="/local_signup">Sign in</a>
+			<a href="/contact_us">Contact us</a>
+			<a href="/about">About us</a>
+			</nav>
+			</header>
+</body1>
+<body>
+
+<div class="container" id="container">
+    <div class="form-container sign-up-container">
+        <form action="/sign_up" method="POST">
+            <h1>Create Account</h1>
+            <div class="social-container">
+                <a href="https://www.facebook.com/" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://accounts.google.com/login" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="https://www.linkedin.com/login" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your email for registration</span>
+            <input type="text" placeholder="name" name = "name"/>
+            <input type="email" placeholder="email" name = "email" />
+            <input type="password" placeholder="password" name = "password" />
+            <% array.forEach(function(elements) {  %>
+                <p class="ui-type-error"><strong><%= elements.msg %></strong></p>
+            <% }); %>   
+            <button>Sign Up</button>
+        </form>
+    </div>
+    <div class="form-container sign-in-container">
+        <form action="/sign_in" method="POST" >
+            <h1>Sign in</h1>
+            <div class="social-container">
+                <a href="/auth/google" class="social"><i class="fab fa-google-plus-g"></i></a>
+            </div>
+            <span>or use your account</span>
+            <input type="email" placeholder="email" name="email" />
+            <input type="password" placeholder="password" name="password" />
+            <% array.forEach(function(elements) {  %>
+                <p class="ui-type-error"><strong><%= elements.msg %></strong></p>
+            <% }); %>
+            <button>Sign In</button>
+        </form>
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>Welcome Back!</h1>
+                <p>To keep connected with us please login with your  info</p>
+                <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>Hello..!!</h1>
+                <p>Enter your  details and start your journey with one and only Tune in With Musicana.....</p>
+                <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="log.js"></script>
+</body>
+</html>
+			

@@ -1,0 +1,32 @@
+{
+  "name": "oauth-playlist-lesson-21",
+  "version": "1.0.0",
+  "description": "Course files for The Net Ninja OAuth playlist on YouTube",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "child_process": "^1.0.2",
+    "cookie-parser": "^1.4.5",
+    "cookie-session": "^1.4.0",
+    "csv-parser": "^3.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.10.0",
+    "fs": "0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.15",
+    "nodemon": "^2.0.7",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "random-words": "^1.1.1",
+    "validator": "^13.5.2"
+  }
+}
